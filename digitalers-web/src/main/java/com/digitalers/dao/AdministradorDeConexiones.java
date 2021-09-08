@@ -10,10 +10,15 @@ public class AdministradorDeConexiones {
 
 	public static Connection obtenerConexion() throws GenericException{
 		
-		String user  = "root";
-		String password = "root";
-		String url = "jdbc:mysql://localhost/digitalers?serverTimeZone=UTC&useSSL=false";
-		String driverName = "com.mysql.cj.jdbc.Driver";
+		String url = System.getenv("SPRING_DATASOURCE_URL");
+		String user = System.getenv("SPRING_DATASOURCE_USERNAME");
+		String password = System.getenv("SPRING_DATASOURCE_PASSWORD");
+		String driverName = System.getenv("SPRING_DATASOURCE_DRIVER");
+				
+		//String url = "jdbc:mysql://127.0.0.1/digitalers?serverTimeZone=UTC&userSSL=false";
+		//String user ="root";
+		//String password = "root";		
+		//String driverName = "com.mysql.cj.jdbc.Driver";
 		
 		Connection connection = null;
 		try {
