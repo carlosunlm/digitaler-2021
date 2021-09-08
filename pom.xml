@@ -11,6 +11,6 @@
   </properties>
   
   <modules>
-  	<module>digitalers-web</module>
+  	<module>digitaler-web</module>
   </modules>
 </project>
