@@ -4,7 +4,7 @@ create schema public;
 CREATE TABLE users (
 	id SERIAL primary key NOT NULL,
 	username VARCHAR(50) NOT NULL,
-	password VARCHAR(50) NOT NULL
+	password VARCHAR(100) NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS newsletter (
