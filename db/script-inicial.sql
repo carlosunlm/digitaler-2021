@@ -152,7 +152,7 @@ ALTER TABLE SOCIOS ADD CONSTRAINT FK_socios_users FOREIGN KEY (users_id) REFEREN
 insert into PAISES (descripcion, descripcion_corta,habilitada) values('ARGENTINA','ARG',1);
 insert into PAISES (descripcion, descripcion_corta,habilitada) values('BRASIL','BRA',1);
 --users
-INSERT INTO USERS (username, password) values('eduit','eduit');
+INSERT INTO USERS (username, password) values('eduit','$2a$12$V7smyy8gLrcwJxtqtDW8E.w1KIXLMKL0/wuVUanNpEP36deWOQ4vG');
 INSERT INTO SOCIOS (nombre,apellido,email,fecha_alta,users_id,direccion,paises_id) VALUES('carlos','lopez','email@email.com',CURRENT_DATE,(SELECT id FROM users LIMIT 1), NULL,(SELECT id FROM paises LIMIT 1));
 
 --categorias
