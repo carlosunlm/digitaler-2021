@@ -34,7 +34,7 @@ public class LoginServlet extends HttpServlet {
 		try {
 			
 			if("".equals(username) || "".equals(password)) {
-				req.setAttribute(ViewKeyEnums.ERROR_GENERAL.name(), "El usuario/password vacios");
+				req.setAttribute(ViewKeyEnums.ERROR_GENERAL.name(), "Cambiar por Usuario/Password incompletos");
 			}else {
 			
 				User user = loginService.getUserByUserName(username);
