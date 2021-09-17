@@ -57,7 +57,7 @@ public class LoginServlet extends HttpServlet {
 			req.setAttribute(ViewKeyEnums.ERROR_GENERAL.name(), e.getMessage());
 		} 
 		
-		//redireccion a otra jsp
+		//redireccion a otra jsp 
 		RequestDispatcher rd = getServletContext().getRequestDispatcher(target.getView());		
 		rd.forward(req, resp);		
 	}
