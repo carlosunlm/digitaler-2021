@@ -19,6 +19,7 @@ public class AdministradorDeConexiones {
 		//String user ="root";
 		//String password = "root";		
 		//String driverName = "com.mysql.cj.jdbc.Driver";
+	
 		
 		Connection connection = null;
 		try {
