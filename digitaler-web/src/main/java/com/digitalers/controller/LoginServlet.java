@@ -34,7 +34,7 @@ public class LoginServlet extends HttpServlet {
 		try {
 			
 			if("".equals(username) || "".equals(password)) {
-				req.setAttribute(ViewKeyEnums.ERROR_GENERAL.name(), "El usuario/password vacios");
+				req.setAttribute(ViewKeyEnums.ERROR_GENERAL.name(), "Cambiar por Usuario/Password incompletos.");
 			}else {
 			
 				User user = loginService.getUserByUserName(username);
@@ -57,7 +57,7 @@ public class LoginServlet extends HttpServlet {
 			req.setAttribute(ViewKeyEnums.ERROR_GENERAL.name(), e.getMessage());
 		} 
 		
-		//redireccion a otra jsp
+		//redireccion a otra jsp 
 		RequestDispatcher rd = getServletContext().getRequestDispatcher(target.getView());		
 		rd.forward(req, resp);		
 	}
