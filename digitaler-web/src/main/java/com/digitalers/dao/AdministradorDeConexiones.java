@@ -33,6 +33,8 @@ public class AdministradorDeConexiones {
 			throw new GenericException("No se ha podido obtener una conexion", e);
 		} catch(ClassNotFoundException e) {
 			throw new GenericException("No se ha encontrado la clase " + driverName, e);
+		} catch (NullPointerException e) {
+			throw new GenericException("No se ha podido obtener una conexion (Null)", e);
 		}
 	}
 }
